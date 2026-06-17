@@ -1,0 +1,118 @@
+:root {
+
+  /* — Couleurs — (changez le hex ; pensez à mettre à jour le -rgb plus bas) */
+  --my-primary:   #0f172a;
+  --my-primary-contrast:#ffffff;
+  --my-secondary: #f97316;
+  --my-secondary-contrast: #ffffff;
+  --my-success:   #16a34a;
+  --my-info:      #0ea5e9;
+  --my-warning:   #f59e0b;
+  --my-danger:    #dc2626;
+  --my-light:     #f8fafc;
+  --my-dark:      #0f172a;
+
+  --bs-primary:   #e6f602;
+  --bs-primary-rgb: 230, 246, 2;
+  --bs-dark:#0f172a;
+  --bs-drark-rgb: 15, 23, 42;
+  --bs-light:#f8fafc;
+  --bs-light-rgb: 248, 250, 252;
+
+  
+  /* — Polices — (chargez d'abord les Google Fonts dans le <head>) */
+  --bs-body-font-family: 'Bebas Neue', sans-serif;
+  --bs-font-sans-serif:  'Bebas Neue', sans-serif;
+  
+
+  /* — Arrondis — */
+  --my-radius:        0.6rem;   /* arrondi de base */
+  --my-radius-btn:    0.6rem;   /* boutons */
+  --my-radius-card:   1rem;     /* cards */
+  --my-radius-alert:  0.6rem;   /* alertes */
+
+}
+.bebas-neue-regular {
+  font-family: "Bebas", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+    font-family: "Bebas Neue", sans-serif;
+    background-image: url('image2heroBCRMF.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* l'image reste fixe pendant le scroll */
+    overflow-x: hidden; /* évite les débordements horizontal */
+    min-height: 100vh; /* l'image couvre toute la hauteur de l'écran */
+}
+
+.hero{/*overlay sur l'image*/
+    background: linear-gradient(
+    180deg, 
+    rgba(0, 0, 0, 0.35) 0%, 
+    rgba(0, 0, 0, 0.15) 35%, 
+    rgba(0, 0, 0, 0.25) 60%, 
+    ),url('image2heroBCRMF.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero h1,
+.hero p {
+    color: #ffffff;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.nav-link:hover {
+    border-color: #000;
+    color: #e6f602;
+    background-color: #000; 
+}
+
+.btn-rock {/*faire un don & prevente tickets*/  
+    background-color: #e6f602; 
+    border-color: #e6f602;
+    color: #000; 
+    font-weight: 600;
+}
+
+.btn-rock:hover {
+    background-color: transparent;
+    border-color: #e6f602;
+    color: #e6f602;
+    font-weight: 600;
+}
+
+.btn-outline-primary {
+    background-color: #e6f602; 
+    border-color: #e6f602;
+    color: #000; 
+    font-weight: 600;
+}
+
+.btn-outline-primary:hover {
+    background-color: transparent;
+    border-color: #e6f602;
+    color: #000;
+    font-weight: 600;
+}
+
+.navbar.nav-lik { /*navbar saut des boutons*/
+    transition: color 0.3s ease;
+}
+.navbar.nav-link:hover {
+    color: #ffc107; 
+}
+.navbar.btn-primary:hover{
+    animation: sauter 0.8
+}
+@keyframes sauter {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+    100% { transform: translateY(0); }
+}
+

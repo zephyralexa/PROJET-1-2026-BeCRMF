@@ -1,0 +1,218 @@
+/* ═══════════════════════════════════════════════════════════════════
+   theme.css — Votre charte graphique Bootstrap
+   ───────────────────────────────────────────────────────────────────
+   À charger APRÈS le CDN de Bootstrap, JAMAIS avant :
+
+     <link href=".../bootstrap.min.css" rel="stylesheet">
+     <link href="theme.css" rel="stylesheet">   <-- ici
+
+   PRINCIPE : on déclare nos valeurs une seule fois dans --my-*,
+   puis on les branche sur les variables que Bootstrap lit vraiment.
+   Pour changer tout le site → on touche UNIQUEMENT le bloc 1.
+   ═══════════════════════════════════════════════════════════════════ */
+
+  /*background-attachment: fixed;// l'image reste fixe pendant le scroll */
+/* ─────────────────────────────────────────────────────────────────
+   BLOC 1 — VOS VALEURS (la seule chose à modifier)
+   ───────────────────────────────────────────────────────────────── */
+:root {
+
+  /* — Couleurs — (changez le hex ; pensez à mettre à jour le -rgb plus bas) */
+
+  
+  /* — Polices — (chargez d'abord les Google Fonts dans le <head>) */
+  --my-font-title: 'Bebas Neuve', sans-serif;
+  --my-font-body:  'Bebas Neuve', sans-serif;
+
+  /* — Arrondis — */
+  --my-radius:        0.6rem;   /* arrondi de base */
+  --my-radius-btn:    0.6rem;   /* boutons */
+  --my-radius-card:   1rem;     /* cards */
+  --my-radius-alert:  0.6rem;   /* alertes */
+}
+
+
+/* ─────────────────────────────────────────────────────────────────
+   BLOC 2 — COULEURS : famille « vive »
+   text-X, bg-X, badge text-bg-X lisent --bs-X / --bs-X-rgb.
+   ⚠ Le -rgb ne se calcule pas tout seul : gardez-le synchro avec le hex.
+   ───────────────────────────────────────────────────────────────── */
+:root {
+  
+
+  /* Liens */
+  --bs-link-color:       var(--my-primary);
+  --bs-link-hover-color: color-mix(in srgb, var(--my-primary) 80%, black);
+}
+
+
+/* ─────────────────────────────────────────────────────────────────
+   BLOC 3 — COULEURS : famille « subtle » (alertes, list-group…)
+   Dérivée automatiquement de vos couleurs avec color-mix
+   (exactement ce que fait Sass : tint pour les fonds, shade pour le texte).
+   ───────────────────────────────────────────────────────────────── */
+:root {
+  --bs-primary-bg-subtle:     color-mix(in srgb, var(--my-primary) 20%, white);
+  --bs-primary-border-subtle: color-mix(in srgb, var(--my-primary) 40%, white);
+  --bs-primary-text-emphasis: color-mix(in srgb, var(--my-primary) 40%, black);
+
+  --bs-secondary-bg-subtle:     color-mix(in srgb, var(--my-secondary) 20%, white);
+  --bs-secondary-border-subtle: color-mix(in srgb, var(--my-secondary) 40%, white);
+  --bs-secondary-text-emphasis: color-mix(in srgb, var(--my-secondary) 40%, black);
+
+  --bs-success-bg-subtle:     color-mix(in srgb, var(--my-success) 20%, white);
+  --bs-success-border-subtle: color-mix(in srgb, var(--my-success) 40%, white);
+  --bs-success-text-emphasis: color-mix(in srgb, var(--my-success) 40%, black);
+
+  --bs-info-bg-subtle:     color-mix(in srgb, var(--my-info) 20%, white);
+  --bs-info-border-subtle: color-mix(in srgb, var(--my-info) 40%, white);
+  --bs-info-text-emphasis: color-mix(in srgb, var(--my-info) 40%, black);
+
+  --bs-warning-bg-subtle:     color-mix(in srgb, var(--my-warning) 20%, white);
+  --bs-warning-border-subtle: color-mix(in srgb, var(--my-warning) 40%, white);
+  --bs-warning-text-emphasis: color-mix(in srgb, var(--my-warning) 40%, black);
+
+  --bs-danger-bg-subtle:     color-mix(in srgb, var(--my-danger) 20%, white);
+  --bs-danger-border-subtle: color-mix(in srgb, var(--my-danger) 40%, white);
+  --bs-danger-text-emphasis: color-mix(in srgb, var(--my-danger) 40%, black);
+}
+
+
+/* ─────────────────────────────────────────────────────────────────
+   BLOC 4 — POLICES
+   Corps : variable native. Titres : pas de variable → surcharge directe.
+   ───────────────────────────────────────────────────────────────── */
+:root {
+  --bs-body-font-family: var(--my-font-body);
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.display-1, .display-2, .display-3,
+.display-4, .display-5, .display-6 {
+  font-family: var(--my-font-title);
+}
+
+
+/* ─────────────────────────────────────────────────────────────────
+   BLOC 5 — ARRONDIS
+   La base cascade vers la plupart des composants ; on précise
+   ensuite par composant pour un contrôle fin.
+   ───────────────────────────────────────────────────────────────── */
+:root {
+  --bs-border-radius: var(--my-radius);
+}
+.btn   { --bs-btn-border-radius:   var(--my-radius-btn); }
+.card  { --bs-card-border-radius:  var(--my-radius-card); }
+.alert { --bs-alert-border-radius: var(--my-radius-alert); }
+
+
+/* ─────────────────────────────────────────────────────────────────
+   BLOC 6 — BOUTONS (famille « composant »)
+   Les boutons NE lisent PAS --bs-primary : ils lisent --bs-btn-*.
+   Survol/actif dérivés en assombrissant la couleur de base (shade).
+   ───────────────────────────────────────────────────────────────── */
+.btn-primary {
+  --bs-btn-bg: var(--my-primary);
+  --bs-btn-border-color: var(--my-primary);
+  --bs-btn-hover-bg: color-mix(in srgb, var(--my-primary) 85%, black);
+  --bs-btn-hover-border-color: color-mix(in srgb, var(--my-primary) 80%, black);
+  --bs-btn-active-bg: color-mix(in srgb, var(--my-primary) 80%, black);
+  --bs-btn-active-border-color: color-mix(in srgb, var(--my-primary) 75%, black);
+}
+.btn-secondary {
+  --bs-btn-bg: var(--my-secondary);
+  --bs-btn-border-color: var(--my-secondary);
+  --bs-btn-hover-bg: color-mix(in srgb, var(--my-secondary) 85%, black);
+  --bs-btn-hover-border-color: color-mix(in srgb, var(--my-secondary) 80%, black);
+  --bs-btn-active-bg: color-mix(in srgb, var(--my-secondary) 80%, black);
+}
+.btn-success {
+  --bs-btn-bg: var(--my-success);
+  --bs-btn-border-color: var(--my-success);
+  --bs-btn-hover-bg: color-mix(in srgb, var(--my-success) 85%, black);
+  --bs-btn-hover-border-color: color-mix(in srgb, var(--my-success) 80%, black);
+  --bs-btn-active-bg: color-mix(in srgb, var(--my-success) 80%, black);
+}
+.btn-info {
+  --bs-btn-bg: var(--my-info);
+  --bs-btn-border-color: var(--my-info);
+  --bs-btn-hover-bg: color-mix(in srgb, var(--my-info) 85%, black);
+  --bs-btn-hover-border-color: color-mix(in srgb, var(--my-info) 80%, black);
+  --bs-btn-active-bg: color-mix(in srgb, var(--my-info) 80%, black);
+}
+.btn-warning {
+  --bs-btn-bg: var(--my-warning);
+  --bs-btn-border-color: var(--my-warning);
+  --bs-btn-hover-bg: color-mix(in srgb, var(--my-warning) 88%, black);
+  --bs-btn-hover-border-color: color-mix(in srgb, var(--my-warning) 83%, black);
+  --bs-btn-active-bg: color-mix(in srgb, var(--my-warning) 83%, black);
+}
+.btn-danger {
+  --bs-btn-bg: var(--my-danger);
+  --bs-btn-border-color: var(--my-danger);
+  --bs-btn-hover-bg: color-mix(in srgb, var(--my-danger) 85%, black);
+  --bs-btn-hover-border-color: color-mix(in srgb, var(--my-danger) 80%, black);
+  --bs-btn-active-bg: color-mix(in srgb, var(--my-danger) 80%, black);
+}
+.btn-light {
+  --bs-btn-bg: var(--my-light);
+  --bs-btn-border-color: var(--my-light);
+  --bs-btn-hover-bg: color-mix(in srgb, var(--my-light) 92%, black);
+  --bs-btn-hover-border-color: color-mix(in srgb, var(--my-light) 88%, black);
+  --bs-btn-active-bg: color-mix(in srgb, var(--my-light) 88%, black);
+}
+.btn-dark {
+  --bs-btn-bg: var(--my-dark);
+  --bs-btn-border-color: var(--my-dark);
+  /* le dark est déjà sombre : on ÉCLAIRCIT au survol (mix avec blanc) */
+  --bs-btn-hover-bg: color-mix(in srgb, var(--my-dark) 85%, white);
+  --bs-btn-hover-border-color: color-mix(in srgb, var(--my-dark) 80%, white);
+  --bs-btn-active-bg: color-mix(in srgb, var(--my-dark) 80%, white);
+}
+
+/* Variantes outline : reprennent la couleur, fond au survol */
+.btn-outline-primary {
+  --bs-btn-color: var(--my-primary);
+  --bs-btn-border-color: var(--my-primary);
+  --bs-btn-hover-bg: var(--my-primary);
+  --bs-btn-hover-border-color: var(--my-primary);
+  --bs-btn-active-bg: var(--my-primary);
+}
+
+
+/* ─────────────────────────────────────────────────────────────────
+   BLOC 7 — VOS PROPRES CLASSES (comportements sur-mesure)
+   Quand Bootstrap ne fournit pas ce qu'on veut (ici une animation
+   d'apparition), on invente NOTRE classe et on écrit son CSS.
+   Ce n'est ni une variable, ni une surcharge : c'est du neuf.
+   ───────────────────────────────────────────────────────────────── */
+
+/* 1. On définit l'animation */
+@keyframes productFadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* 2. On crée notre classe et on l'applique dans le HTML */
+.product-card-animation {
+  opacity: 0;                                   /* état de départ */
+  animation: productFadeUp 0.6s ease forwards;  /* forwards = garde l'état final */
+}
+
+/* 3. Effet de cascade : chaque card démarre un peu après la précédente */
+.product-card-animation:nth-child(1) { animation-delay: 0.05s; }
+.product-card-animation:nth-child(2) { animation-delay: 0.15s; }
+.product-card-animation:nth-child(3) { animation-delay: 0.25s; }
+.product-card-animation:nth-child(4) { animation-delay: 0.35s; }
+
+/* 4. Bonus : on combine avec une surcharge de .card pour le survol */
+.product-card-animation .card,
+.product-card-animation.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.product-card-animation .card:hover,
+.product-card-animation.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}

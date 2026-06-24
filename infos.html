@@ -18,17 +18,16 @@
     <!-- ③ VOTRE fichier  -->
     <link  rel="stylesheet" href="theme.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="info.css">
 </head>
+<body>
 
-
-<body class="d-flex flex-column min-vh-100 bg-dark">
-    <!-- ════════ NAVBAR ════════ -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom">
-        <div class="container">
-            <!--<a class="navbar-brand" href="#">BECRMF</a>-->
-            <a class="navbar-brand fs-3 fw-bold text-uppercase tracking-wider" href="#">BeCRMF</a>
+    
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom">
+    <div class="container">
+        <a class="navbar-brand" href="#">BeCRMF</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-                <span class="navbar-toggler-icon">Button</span>
+                <span class="navbar-toggler-icon"></span>
                 
             </button>
             <div class="collapse navbar-collapse" id="nav">
@@ -45,8 +44,8 @@
         </div>
     </nav>
 
-    <!-- ════════ HERO ════════ -->
-    <header class="hero py-5 text-center text-dark">
+<!-- ════════ HERO ════════ -->
+<header class="hero py-5 text-center text-dark">
     <div class="container py-4">
         <h1 class="display-4 fw-bold texte mb-3">BE CAUSE ROCK MARATHON FESTIVAL</h1>
         <p class="lead mb-4 mx-auto">
@@ -60,36 +59,94 @@
     </header>
 
 <!-- ════════  PROGRAMME════════ -->
-<main class="flex-grow-1">
+<body>
+    
 
-  <section id="programme-line-up" class="container my-4">
-    <div class="bg-programme text-white rounded-4 py-4 px-3">
-        <h2 class="text-center mb-4 text-white">Programme de la soirée</h2>
-        <div class="row text-center g-3">
-            <div class="col-6 col-md-3"> <!---col-6 moitier de ligne,col-md-3= quart de ligne-->
-                <div class="fs-2 fw-bold text-white">11</div>
-                <div class="text-uppercase text-white small">Avril 2026</div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="fs-2 fw-bold text-white">14h</div>
-                <div class="text-uppercase text-white small">Début</div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="fs-2 fw-bold text-white">9</div>
-                <div class="text-uppercase text-white small">Groupes</div>
-            </div>
-            <div class="col-6 col-md-3">
-                <div class="fs-2 fw-bold text-white">18€</div>
-                <div class="text-uppercase text-white small">Sur place</div>
-            </div>
-        </div>
-     </div>
-   </section>
-  <section id="restauration" class="my-4">
-        <p class="text-center mb-4 text-white"> Petite restauration disponible sur place !</p>
+<main>
+<section>
+     <div class="container">
+        <h2 class="section-infos text-white text-center my-5">INFOS</h2>
+      </div>
   </section>
+
+
+  <!-- Grille des infos -->
+    <div class="container my-5 px-4 px-md-5">
+    <section>
+      <class class="row g-4">
+    
+  <!-- Groupe 1 -->
+
+<div class="col-12 col-sm-6 col-lg-4 mb-4"> 
+  <article class="card band-card h-100 p-4 flex-column justify-content-center align-items-center text-center">
+    <a href="https://www.belgiantrain.be/fr/?journey=0" target="_blank" rel="noopener noreferrer" aria-label="SNCB trajet train" class="text-decoration-none text-dark h-100 d-flex flex-column justify-content-center align-items-center">
+ 
+      <p class="band-genre text-uppercase fw-semibold mb-3 d-flex align-items-center justify-content-center">TRAIN</p>
+         <i class="fa-solid fa-train me-2"></i>
+      <p class="mb-0">Cliquez ici pour planifier votre trajet</p>
+      <p class="mb-0">depuis la gare de Liège</p>
+
+
+      
+    </a>
+  </article>
+</div>
+
+ <!-- Groupe 2 -->
+<div class="col-12 col-sm-6 col-lg-4 mb-4"> 
+  <article class="card band-card h-100 d-flex flex-column justify-content-center align-items-center p-4">
+   <a href="https://www.letec.be/itineraries?journeyFrom=VERVIERS%20Gare%20Centrale&originLatitude=50.588641&originLongitude=5.855375&journeyTo=Pepinster&destinationLatitude=50.56818&destinationLongitude=5.806155&when=2&date=2026-06-27T11:20:00.000Z&how=6&how=4&how=5&how=3&how=1&how=7&how=2&walkingSpeed=2&isPmr=false&ignoreScrollRestoration=true" target="_blank" rel="noopener noreferrer" aria-label="SNCB trajet train" class="text-decoration-none text-dark h-100 d-flex flex-column justify-content-center align-items-center"  
+      <p class="band-genre d-block text-uppercase fw-semibold mb-1">BUS</p>
+        <i class="fa-solid fa-bus me-2"></i>
+      <p class="mb-0">Cliquez ici pour planifier votre trajet</p>
+      <p class="mb-0">depuis la gare de vervier</p>
+   </a>
+  </article>
+</div>
+
+<!-- Groupe 3 -->
+ <div class="col-12 col-sm-6 col-lg-4 mb-4"> 
+  <article class="card band-card h-100 d-flex flex-column justify-content-center align-items-center p-4">
+   <a href="https://www.google.com/maps/dir/Li%C3%A8ge/Espace+n%C3%B4,+Rue+la+N%C3%B4+51,+4860+Pepinster/@50.5064258,5.7478334,12z/data=!3m1!4b1!4m18!4m17!1m5!1m1!1s0x47c05e8edb551243:0x20099ab2f4c80d0!2m2!1d5.8491614!2d50.449642!1m5!1m1!1s0x47c08b185c6a964f:0xd180e9ba80c6d309!2m2!1d5.8012314!2d50.5626266!2m3!6e0!7e2!8j1782567600!3e0?entry=ttu&g_ep=EgoyMDI2MDYyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" aria-label="SNCB trajet train" class="text-decoration-none text-dark h-100 d-flex flex-column justify-content-center align-items-center">  
+    <p class="band-genre d-block text-uppercase fw-semibold mb-1">VOITURE</p>
+       <i class="fa-solid fa-car me-2"></i>
+    <p class="mb-0">Cliquez ici</p>
+    <p class="mb-0">depuis la ville de Liège</p> 
+   </a> 
+  </article>
+ </div>  
+
+
+<!-- Groupe 4 -->
+ <div class="col-12 col-sm-6 col-lg-4 mb-4"> 
+  <article class="card band-card h-100 d-flex flex-column justify-content-center align-items-center p-4">
+    <p class="band-genre d-block text-uppercase fw-semibold mb-1">FOOD AND DRINK</p>
+    <p class="mb-0">Cliquez ici</p>
+    
+  </article>
+</div>
+
+<!-- Groupe 5 -->
+ <div class="col-12 col-sm-6 col-lg-4 mb-4"> 
+  <article class="card band-card h-100 d-flex flex-column justify-content-center align-items-center p-4">
+    <p class="band-genre d-block text-uppercase fw-semibold mb-1">CASH</p>
+    <p class="mb-0">Cliquez ici</p>
+  </article>
+</div>
+
+<!-- Groupe 6 -->
+ <div class="col-12 col-sm-6 col-lg-4 mb-4"> 
+  <article class="card band-card h-100 d-flex flex-column justify-content-center align-items-center p-4">
+    <p class="band-genre d-block text-uppercase fw-semibold mb-1">ANIMATIONS</p>
+    <p class="mb-0">Cliquez ici</p>
+  </article>
+</div>
+
+
+
 </main>
-    <!-- ════════ FOOTER ════════ -->
+
+<!-- ════════ FOOTER ════════ -->
     <footer class="py-4 bg-dark text-light">
         <div class="container d-flex flex-wrap justify-content-between align-items-center">
             <span>© 2026 BECRMF- Festival-Tous droits réservés</span>
@@ -163,8 +220,8 @@
 
     <script src="https://kit.fontawesome.com/9ffe435310.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
 
+</body>
 </html>
 
 

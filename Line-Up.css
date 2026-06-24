@@ -39,11 +39,6 @@ body {
   text-align: center;
 }
 
-
-
-
-
-
 ----------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------
 /*TITRE HAUT ET BAS DE PAGE LINE-UP*/
@@ -76,6 +71,25 @@ body {
 }
 
 .btn-fire {
-  color: var(--my-color-yellow);
+  color: #ffc107 !important;
+  font-size:1.2rem;
+  letter-spacing:1px ;
+  display: inline-block;
+  border-radius: 0.6rem;
+  padding: 0.8rem 1.8rem;
+  margin-top: 2cm;
+  text-align: center;
+  font-weight: 700
+} 
+
+
+.btn-fire:hover{
+  color: #ffff;
+  background-color: #0d121c;
+  border: 1px solid #ffc107;
+  box-shadow: 0 4px 10px;
+  
 }
+
+
 

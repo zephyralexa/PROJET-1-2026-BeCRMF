@@ -20,14 +20,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
 
+<body class="d-flex flex-column min-vh-100 bg-dark">
     <!-- ════════ NAVBAR ════════ -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark border-bottom">
         <div class="container">
-            <a class="navbar-brand" href="#">BeCRMF</a>
+            <!--<a class="navbar-brand" href="#">BECRMF</a>-->
+            <a class="navbar-brand fs-3 fw-bold text-uppercase tracking-wider" href="#">BeCRMF</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-                <span class="navbar-toggler-icon"></span>
+                <span class="navbar-toggler-icon">Button</span>
+                
             </button>
             <div class="collapse navbar-collapse" id="nav">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -35,8 +37,9 @@
                     <li class="nav-item"><a class="nav-link text-end " href="line-up.html">Line-Up</a></li>
                     <li class="nav-item"><a class="nav-link text-end " href="billetterie.html">Billetterie</a></li>
                     <li class="nav-item"><a class="nav-link text-end " href="infos.html">Infos</a></li>       
-                    <li class="nav-item"><a class="nav-link text-end " href="contact.html">Contact</a></li>  
                     <li class="nav-item"><a class="nav-link text-end " href="mon panier">Mon panier</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <button type="button" class="btn btn-rock btn-sm" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</button></li>
                   </ul>
             </div>
         </div>
@@ -51,16 +54,17 @@
         </p>
         <div class="d-flex gap-3 justify-content-center">
             <a href="#don" class="btn btn-rock btn-lg">FAIRE UN DON</a>
-            <a href="#vente" class="btn btn-outline-texte-black btn-lg">PREVENTE TICKETS</a>
+            <a href="#vente" class="btn btn-outline-rock btn-lg">PREVENTE TICKETS</a>
         </div>
     </div>
     </header>
 
     <!-- ════════  PROGRAMME════════ -->
-<main>
-  <section id="programme line-up" class="container my-4">
+<main class="flex-grow-1">
+
+  <section id="programme-line-up" class="container my-4">
     <div class="bg-programme text-white rounded-4 py-4 px-3">
-        <h3 class="text-center mb-4 text-white">Programme de la soirée</h3>
+        <h2 class="text-center mb-4 text-white">Programme de la soirée</h2>
         <div class="row text-center g-3">
             <div class="col-6 col-md-3"> <!---col-6 moitier de ligne,col-md-3= quart de ligne-->
                 <div class="fs-2 fw-bold text-white">11</div>
@@ -80,19 +84,82 @@
             </div>
         </div>
      </div>
-    </section>
-   </div>
+   </section>
   <section id="restauration" class="my-4">
         <p class="text-center mb-4 text-white"> Petite restauration disponible sur place !</p>
   </section>
-  </main>
-  <!-- ════════ FOOTER ════════ -->
+</main>
+    <!-- ════════ FOOTER ════════ -->
     <footer class="py-4 bg-dark text-light">
         <div class="container d-flex flex-wrap justify-content-between align-items-center">
             <span>© 2026 BECRMF- Festival-Tous droits réservés</span>
-            <a href="#" class="btn btn-sm btn-outline-light">Nous contacter</a>
         </div>
     </footer>
+
+    <!-- MODALE CONTACT -->
+<div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content rounded-4">
+
+            <div class="modal-header bg-dark text-white">
+                <h2 class="modal-title fs-4" id="contactModalLabel">Contact</h2>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+
+            <div class="modal-body">
+                <p class="mb-4">
+                    Une question sur le festival ? Envoyez-nous un message.
+                </p>
+
+                <form action="#" method="post">
+                    <div class="row g-3">
+
+                        <div class="col-12 col-md-6">
+                            <label for="prenom" class="form-label">Prénom</label>
+                            <input type="text" id="prenom" name="prenom" class="form-control" required>
+                        </div>
+
+                        <div class="col-12 col-md-6">
+                            <label for="nom" class="form-label">Nom</label>
+                            <input type="text" id="nom" name="nom" class="form-control">
+                        </div>
+
+                        <div class="col-12">
+                            <label for="email" class="form-label">Adresse e-mail</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="sujet" class="form-label">Sujet</label>
+                            <select id="sujet" name="sujet" class="form-select" required>
+                                <option value="">Choisissez un sujet</option>
+                                <option value="billetterie">Billetterie</option>
+                                <option value="don">Don</option>
+                                <option value="infos">Informations pratiques</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="d-grid d-md-block">
+                                <button type="submit" class="btn btn-rock">
+                                    Envoyer le message
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
 
     <script src="https://kit.fontawesome.com/9ffe435310.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

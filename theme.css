@@ -21,8 +21,8 @@
 
   
   /* — Polices — (chargez d'abord les Google Fonts dans le <head>) */
-  --my-font-title: 'Bebas Neuve', sans-serif;
-  --my-font-body:  'Bebas Neuve', sans-serif;
+  --my-font-title: 'Bebas Neue', sans-serif;
+  --my-font-body:  'Bebas Neue', sans-serif;
 
   /* — Arrondis — */
   --my-radius:        0.6rem;   /* arrondi de base */

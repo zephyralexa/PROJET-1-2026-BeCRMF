@@ -1,0 +1,81 @@
+:root {
+  --bs-primary:   #ffc107;
+  --bs-primary-rgb: 255, 193, 7;
+  --bs-dark: #0f172a;
+  --bs-dark-rgb: 15, 23, 42;
+  --bs-light: #f8fafc;
+  --bs-light-rgb: 248, 250, 252;
+
+  --bs-body-font-family: 'Bebas Neue', sans-serif;
+  --bs-font-sans-serif: 'Bebas Neue', sans-serif;
+
+
+  /* — Polices — (chargez d'abord les Google Fonts dans le <head>) */
+  --bs-body-font-family: 'Bebas Neue', sans-serif;
+  --bs-font-sans-serif:  'Bebas Neue', sans-serif;
+  
+
+  --my-radius: 0.6rem;
+  --my-radius-btn: 0.6rem;
+  --my-radius-card: 1rem;
+  --my-radius-alert: 0.6rem;
+
+  --my-color-yellow: #ffc107
+}
+
+body { 
+  font-family: "Bebas Neue", sans-serif;
+  background-color: #050816;
+  color: #ffc107;
+}
+
+/*couleur changement de titre line-up*/
+#section-line-up {
+  color: #ffc107 !important;
+}
+
+.section-rock {
+  margin-top: 100px;
+  text-align: center;
+}
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------
+/*TITRE HAUT ET BAS DE PAGE LINE-UP*/
+----------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------
+.section-line-up{
+  font-family: 'Bebas Neue', sans-serif !important;
+    color: white/*var(--my-color-yellow)*/ !important;
+    font-size: 3rem !important; /* augmenter un peu la taille */
+    letter-spacing: 1.5px !important; /* écarter légèrement les lettres */
+}
+
+.section-title {
+    font-family: 'Bebas Neue', sans-serif !important;
+    color: white/*var(--my-color-yellow)*/ !important;
+    font-size: 2rem !important; /* augmenter un peu la taille */
+    letter-spacing: 1px !important; /* écarter légèrement les lettres */
+}
+
+.section-sous-titre {
+    font-family: 'Bebas Neue', sans-serif !important;
+    font-size: 2rem !important; /* augmenter un peu la taille */
+    letter-spacing: 1px !important; /* écarter légèrement les lettres */
+}
+
+.section-info {
+    font-family: 'Bebas Neue', sans-serif !important;
+    font-size: 2rem !important; /* augmenter un peu la taille */
+    letter-spacing: 1px !important; /* écarter légèrement les lettres */
+}
+
+.btn-fire {
+  color: var(--my-color-yellow);
+}
+

@@ -32,8 +32,9 @@
   --my-radius-alert:  0.6rem;   /* alertes */
 
 }
-.bebas-neue-regular {
-  font-family: "Bebas", sans-serif;
+
+.bebas-neue-regular{
+  font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -42,6 +43,7 @@ body {
     font-family: "Bebas Neue", sans-serif;
     background-image: url('image2heroBCRMF.webp');
     background-size: cover;
+    background-color: #111111;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed; /* l'image reste fixe pendant le scroll */
@@ -49,62 +51,61 @@ body {
     min-height: 100vh; /* l'image couvre toute la hauteur de l'écran */
 }
 
-.hero{/*overlay sur l'image*/
+.hero{
+    position: relative;
     background: linear-gradient(
     180deg, 
-    rgba(0, 0, 0, 0.35) 0%, 
-    rgba(0, 0, 0, 0.15) 35%, 
-    rgba(0, 0, 0, 0.25) 60%, 
-    ),url('image2heroBCRMF.webp');
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.45),
+    rgba(0, 0, 0, 0.65) 85%,
+    rgba(0, 0, 0, 0.75) 100%
+    );
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
+
 
 .hero h1,
 .hero p {
     color: #ffffff;
-    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+    text-shadow: 0 3px 10px rgba(20, 9, 9, 0.8);
 }
 
 .nav-link:hover {
     border-color: #000;
-    color: #e6f602;
+    color: #ffc107;
     background-color: #000; 
 }
 
-.btn-rock {/*faire un don & prevente tickets*/  
-    background-color: #e6f602; 
-    border-color: #e6f602;
-    color: #000; 
-    font-weight: 600;
+.btn-rock,/*faire un don & prevente tickets*/  
+.btn-outline-rock{
+    background-color: #1a1a1a !important;
+    border: 2px solid #ffc107 !important;
+    color: #ffffff !important;
+    padding: 10px 25px !important; 
+    font-size: 16px !important;
+    border-radius: 6px !important;
+    text-transform: uppercase;
+    letter-spacing: 2px !important;
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease !important;
+    font-weight: 700 !important;
 }
 
-.btn-rock:hover {
-    background-color: transparent;
-    border-color: #e6f602;
-    color: #e6f602;
-    font-weight: 600;
+.btn-rock:hover,
+.btn-outline-rock:hover{
+    background-color: #ffc107 !important;
+    color: #000000 !important;
+    text-shadow: 0 1px 0px rgba(0, 0, 0, 0.2) !important ;
+    box-shadow: #ffc107 0 0 8px, #ffc107 0 0 20px !important;
+    
 }
 
-.btn-outline-primary {
-    background-color: #e6f602; 
-    border-color: #e6f602;
-    color: #000; 
-    font-weight: 600;
-}
-
-.btn-outline-primary:hover {
-    background-color: transparent;
-    border-color: #e6f602;
-    color: #000;
-    font-weight: 600;
-}
-
-.navbar.nav-lik { /*navbar saut des boutons*/
+.navbar.nav-link { /*navbar saut des boutons*/
     transition: color 0.3s ease;
 }
-.navbar.nav-link:hover {
+.navbar .nav-link:hover {
     color: #ffc107; 
 }
 .navbar.btn-primary:hover{
@@ -116,3 +117,24 @@ body {
     100% { transform: translateY(0); }
 }
 
+main.flex-grow-1 { 
+  display: flow-root;
+}
+
+#programme-line-up{
+    margin-top: -20px !important;
+    margin-bottom: 0;
+    padding-top: 0 ;
+    padding-bottom:1rem !important;    /* Remplace la marge par de l'espace interne */
+}   
+
+#programme-line-up .rounded-4 {
+    background-color: rgba(26, 26, 26, 0.9) !important; /* Fond bien opaque pour bloquer la lumière */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+}
+
+/* On réduit aussi la marge du bloc de restauration juste en dessous pour tout resserrer */
+#restauration {
+    margin-top: 0.5rem !important;
+    margin-bottom: 1rem !important;
+}

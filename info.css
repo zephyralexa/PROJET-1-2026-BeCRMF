@@ -1,7 +1,0 @@
-body {
-    background-image: url('chemin-de-votre-image.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* Évite que l'image bouge bizarrement au scroll */
-    background-repeat: no-repeat;
-    min-height: 100vh;

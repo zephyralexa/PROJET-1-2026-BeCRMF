@@ -44,6 +44,9 @@ body {
 /*TITRE HAUT ET BAS DE PAGE LINE-UP*/
 ----------------------------------------------------------------------------------------------------------------------------
 ----------------------------------------------------------------------------------------------------------------------------
+.click-text {/*couleur sur text card*/
+    color: red !important;
+}
 .section-line-up{
   font-family: 'Bebas Neue', sans-serif !important;
     color: white/*var(--my-color-yellow)*/ !important;
@@ -85,7 +88,7 @@ body {
 
 .btn-fire:hover{
   color: #ffff;
-  background-color: #0d121c;
+  background-color: #000;
   border: 1px solid #ffc107;
   box-shadow: 0 4px 10px;
   
